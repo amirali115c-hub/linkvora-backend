@@ -231,7 +231,7 @@ app.post('/api/settings', (req, res) => {
 app.get('/api/health', (req, res) => res.json({ status: 'ok', db: !!db }));
 
 // ── Start server ──
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 openDatabase().then(() => {
   app.listen(PORT, () => console.log(`Linkvora backend running on port ${PORT}`));
 });
